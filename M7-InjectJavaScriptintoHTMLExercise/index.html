@@ -1,0 +1,23 @@
+<html>
+  <script>
+    window.onload = function () {
+      const slot = document.getElementById("div1");
+      var time = 100;
+      const getTime = () => {
+        if (time > 0) {
+          time = time - 1
+        } else {
+          time = 0
+        }
+        slot.innerHTML = "Goodbye Aliens: Your ship leaves in " + time + "seconds";
+      }
+      setInterval(getTime, 1000)
+    };
+  </script>
+  <body>
+    <div>
+      <h1>Hello Earthling</h1>
+      <h1 id="div1"></h1>
+    </div>
+  </body>
+</html>
